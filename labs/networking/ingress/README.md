@@ -34,11 +34,13 @@ An ingress controller is a piece of software that provides reverse proxy, config
 2. Create the NGINX ingress controller
 
     ```bash
+    # Add Helm Repository
+    helm repo add stable https://kubernetes-charts.storage.googleapis.com
     # Make sure Helm Repository is up to date
     helm repo update
 
     # Install ingress controller via helm chart
-    helm install stable/nginx-ingress --namespace kube-system --set controller.replicaCount=2
+    helm install stable/nginx-ingress --namespace kube-system --set controller.replicaCount=2 --generate-name
     
     # Validate nginx is installed and running
     helm list
