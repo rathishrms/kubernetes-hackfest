@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: sample-go
-        image: chzbrgr71/sample-go:v1
+        image: acrhackfest28579.azurecr.io/app/sample-go:caw
         ports:
         - name: web
           containerPort: 8080
